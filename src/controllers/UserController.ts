@@ -13,7 +13,7 @@ class UserController {
     // emailValidation
     const emailAlredyExists = await User.findOne({ where: { email: email } });
     if (emailAlredyExists) {
-      return res.status(400).send();
+      return res.status(400).send({error:"email already registered"});
     }
     // generate password hash
     const salt = bcrypt.genSaltSync(10);
