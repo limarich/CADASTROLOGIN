@@ -1,8 +1,13 @@
 import {Sequelize} from "sequelize";
 const {DATABASE_NAME,DATABASE_HOST,DATABASE_PORT,DATABASE_USER,DATABASE_PASSWORD} = process.env;
 
-const sequelize = new Sequelize(`${DATABASE_NAME}`, `${DATABASE_USER}`, `${DATABASE_PASSWORD}`, {
-  host: `${DATABASE_HOST}`,
+// const sequelize = new Sequelize(`${DATABASE_NAME}`, `${DATABASE_USER}`, `${DATABASE_PASSWORD}`, {
+//   host: `${DATABASE_HOST}`,
+//   dialect: 'mysql',
+//   port:  3306
+// })
+const sequelize = new Sequelize(`sistema`, `root`, ``, {
+  host: `localhost`,
   dialect: 'mysql',
   port:  3306
 })
