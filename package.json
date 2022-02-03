@@ -1,5 +1,5 @@
 {
-  "name": "CADASTROLOGIN",
+  "name": "cadastro-login",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -14,10 +14,14 @@
   "author": "Richard Lima <richard.esclima@gmail.com> (https://github.com/limarich/)",
   "license": "ISC",
   "dependencies": {
+    "@types/express-session": "^1.17.4",
+    "@types/sequelize": "^4.28.11",
+    "@types/session-file-store": "^1.2.2",
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.1",
     "dotenv": "^15.0.0",
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.15",
     "sequelize": "^6.15.0",
     "ts-node": "^10.4.0"
   },
