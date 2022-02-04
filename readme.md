@@ -6,7 +6,7 @@
   <a href="#sobre">| Sobre |</a>
   <a href="#tecnologias"> Tecnologias |</a>
   <a href="#tutorial"> Como usar |</a>
-  <a href="https://limarich.github.io/My-ToDo/">Página do projeto</a>|
+  <a href="https://limarich.github.io/CADASTROLOGIN/">Página do projeto</a>|
 </p>
 <hr>
 
@@ -97,7 +97,7 @@ DATABASE_PASSWORD = "root"
 > Recomendo fortemente que assista ao meu vídeo [acima](https://www.loom.com/share/ed73c094e9f2484584ea7b33a7dafc0e)
 
 **Contatos** 
-- <a href="https://limarich.github.io/My-ToDo/">Página do projeto</a>
+- <a href="https://limarich.github.io/CADASTROLOGIN/">Página do projeto</a>
 - <a href="https://www.linkedin.com/in/richard-lima-488b451a8/">Linkedin</a>
 - <a href="https://github.com/limarich/">github</a> 
 - <a href="mailto:richard.esclima@gmail.com">e-mail</a>
