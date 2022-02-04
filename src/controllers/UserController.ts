@@ -71,8 +71,9 @@ class UserController {
   // UPDATE USER
   async updateUser(req: Request, res: Response) {
     const { id, name, email } = req.body;
-    await User.update({ name, email }, { where: { id: id } });
-    return res.status(204).send();
+    const user  = await User.findOne({where:{email:email}});
+    if(user && (<any>user).id !== id) {return res.status(400).send({error:"email already registered"})}
+    await User.update({ name, email }, { where: { id: id } }).then(()=> {return res.status(204).send()}).catch((err)=>{return res.status(400).send(err)});
   }
 
   // CHANGE PASSWORD
