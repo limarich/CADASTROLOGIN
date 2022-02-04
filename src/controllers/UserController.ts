@@ -94,7 +94,7 @@ class UserController {
   // DELETE USER
   async destroyUser(req: Request, res: Response) {
     const { id } = req.body;
-    await User.destroy({ where: { id: id } });
+    if(id) await User.destroy({ where: { id: id } });
     return res.status(204).send();
   }
 }
