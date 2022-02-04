@@ -1,37 +1,110 @@
-## Welcome to GitHub Pages
+## Sistema de Cadastro e Login
 
-You can use the [editor on GitHub](https://github.com/limarich/CADASTROLOGIN/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+- Já parou para pensar como que funciona um sistema desses!? 
+  - Nada melhor do que praticar para descobrir.
+<p align="center">
+  <a href="#sobre">| Sobre |</a>
+  <a href="#tecnologias"> Tecnologias |</a>
+  <a href="#tutorial"> Como usar |</a>
+  <a href="https://limarich.github.io/My-ToDo/">Página do projeto</a>|
+</p>
+<hr>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Sobre
 
-### Markdown
+Sem mais delongas, o projeto consiste em uma aplicação Node+typescript que faz uso de um banco de dados Mysql que configurei para rodar em um docker container.
+<br><br>
+Por enquanto o projeto ainda não possui interface, então é necessário utilizar algum programa que te permita fazer mais requisições do que seu navegador permite(apenas GET para quem não sabe). No meu caso utilizei o [Postman](https://www.postman.com/downloads/) e tenho algumas requisições:
+<br>
+- login
+- cadastro
+- busca por usuários
+- busca por usuários
+- atualização de dados de um usuário
+- mudança de senha
+- remoção de um usuário
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Segue um vídeo abaixo onde eu falo um pouco sobre o projeto.
+<img src="https://www.loom.com/share/ed73c094e9f2484584ea7b33a7dafc0e" />
+[Caso não carregue clique aqui](https://www.loom.com/share/ed73c094e9f2484584ea7b33a7dafc0e)
+
+### Tecnologias
+Para a construção deste projeto foram usadas as tecnologias:
+
+- Nodejs
+- Mysql
+- Typescript
+- Docker
+- express
+- sequelize
+- celebrate
+- bycript
+- Eslint
+- prittier
+
+> Bastante coisa né? normalmente aplicações complexas requerem mais dependências para te dar um suporte melhor. Não se preocupe, normalmente vc se acostuma bem rápido!
+
+### Tutorial
 
 ```markdown
-Syntax highlighted code block
+#clone este repositório
+https://github.com/limarich/CADASTROLOGIN.git
 
-# Header 1
-## Header 2
-### Header 3
+1. caso queira utilizar o npm 
+#baixe as dependencias
+npm install
 
-- Bulleted
-- List
+- inicie Mysql no xamp!
 
-1. Numbered
-2. List
+## crie o banco de dados com o nome indicado:
+ CREATE DATABASE "nome que estiver no arquivo .env"
 
-**Bold** and _Italic_ and `Code` text
+#converta o index.ts para index.js
+- npm run build
 
-[Link](url) and ![Image](src)
+#inicie a aplicação
+- npm start
+
+##ou ainda execute  apenas:
+`npm run dev`
+
+2. caso prefira utilizar o docker/docker-compose
+
+# inicie o compose
+- docker-compose up
+# provavelmente você terá um erro que pode ser corrigido pelo próprio cmd
+
+# no cmd execute:
+- mysql -u root
+- create new schema "nome que estará no arquivo .env"
+
+#pronto caso necessite, dê um ctrl+C e rode de novo docker-compose up
+
+3. para todos configurarem as variáveis de ambiente
+# existem 5 variáveis que você precisa "setar" para poder usar, preencha os dados que correspondem ao seu caso e renomeie de .env.locals para .env
+##exemplo
+`
+DATABASE_NAME = "sistema"
+DATABASE_HOST = "database-login"
+DATABASE_PORT = 3306
+DATABASE_USER = "root"
+DATABASE_PASSWORD = "root"
+`
+
+
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+> Recomendo fortemente que assista ao meu vídeo [acima](https://www.loom.com/share/ed73c094e9f2484584ea7b33a7dafc0e)
 
-### Jekyll Themes
+**Contatos** 
+- <a href="https://limarich.github.io/My-ToDo/">Página do projeto</a>
+- <a href="https://www.linkedin.com/in/richard-lima-488b451a8/">Linkedin</a>
+- <a href="https://github.com/limarich/">github</a> 
+- <a href="mailto:richard.esclima@gmail.com">e-mail</a>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/limarich/CADASTROLOGIN/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+------------
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<br>
+
+<p>Feito por Richard Lima Ribeiro</p>
