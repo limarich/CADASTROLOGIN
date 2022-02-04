@@ -12,7 +12,9 @@ app.use(router);
 
 app.use(errors());
 sequelize
-  .sync()
+  .sync({
+    force: false, // SET TRUE TO RESET DATABASE REGISTERS
+  })
   .then(() => {
     app.listen(3000, () => {
       console.log(`App rodando na porta 3000`);

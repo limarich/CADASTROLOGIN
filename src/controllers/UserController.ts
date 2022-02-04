@@ -37,14 +37,14 @@ class UserController {
 
     // check if email is valid
     if (!user) {
-      return res.status(400).send({ error: "email ou senha não inválido" });
+      return res.status(400).send({ error: "email/password is invalid" });
     }
     // check if password is valid
     const passwordsMatch = bcrypt.compareSync(password, (<any>user).password);
     if (!passwordsMatch) {
-      return res.status(400).send({ error: "email ou senha não inválido" });
+      return res.status(400).send({ error: "email/password is invalid" });
     }
-    return res.status(200).send({ message: "usuario logado com sucesso" });
+    return res.status(200).send({ message: "user logged in successfully" });
   }
 
   // READ ALL USERS- RETURN A LIST OF NAMES AND EMAILS REGISTERED
